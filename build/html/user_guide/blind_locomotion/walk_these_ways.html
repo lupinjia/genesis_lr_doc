@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>⛕ Walk These Ways &#8212; genesis_lr  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/blind_locomotion/walk_these_ways';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="🧑‍🏫🧑‍🏫 Teacher-Student Framework" href="teacher_student.html" />
+    <link rel="prev" title="🧬Code Architecture" href="../getting_started/code_architecture.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">genesis_lr  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">🛠️Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/quick_start.html">🚀Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/deploy_to_real_robot.html">⬇️Deploy to Real Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/code_architecture.html">🧬Code Architecture</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Blind Locomotion</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">⛕ Walk These Ways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teacher_student.html">🧑‍🏫🧑‍🏫 Teacher-Student Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="explicit_estimator.html">⏱️ Explicit Estimator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dreamwaq.html">DreamWaQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sim2real_skills.html">Sim2real Skills</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Guide</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">⛕ Walk These Ways</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="walk-these-ways">
+<h1>⛕ Walk These Ways<a class="headerlink" href="#walk-these-ways" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p>Code in this section corresponds to <code class="docutils literal notranslate"><span class="pre">go2_wtw</span></code> in genesis_lr.</p>
+</div></blockquote>
+<p>As stated by Margolis <span class="math notranslate nohighlight">\( \textit{et al.}^{1}\)</span>, the multiplicity of behavior (MoB) can help the robot generalize in different ways. The basic idea of <span class="math notranslate nohighlight">\( \textit{Walk These Ways} \)</span> is to learn different behaviors on the flat ground and tune the behavior through high-level decision (which is human operator in this paper).</p>
+<p>To incoporate different behaviors into one NN, we essentially want to achieve multi-task reinforcement learning. Key components in this implementation consist of three parts:</p>
+<ol class="arabic simple">
+<li><p>Task-related observation</p></li>
+<li><p>Task rewards</p></li>
+<li><p>Reward-based Curriculum</p></li>
+</ol>
+<section id="task-related-observation">
+<h2>Task-related Observation<a class="headerlink" href="#task-related-observation" title="Permalink to this heading">#</a></h2>
+<p>To enable the neural network policy to distinguish between different behaviors, we need to provide observation related to the task as an input.</p>
+<p>In our implementation, our interested behavior include <code class="docutils literal notranslate"><span class="pre">gait_period</span></code>, <code class="docutils literal notranslate"><span class="pre">base_height</span></code>, <code class="docutils literal notranslate"><span class="pre">foot_clearance</span></code>, <code class="docutils literal notranslate"><span class="pre">base_pitch</span></code> and <code class="docutils literal notranslate"><span class="pre">gait_type</span></code>. For the first four behavior, we just place the parameter directly into the observation. For the <code class="docutils literal notranslate"><span class="pre">gait_type</span></code>, we use <code class="docutils literal notranslate"><span class="pre">theta</span> <span class="pre">(phase</span> <span class="pre">offset</span> <span class="pre">of</span> <span class="pre">four</span> <span class="pre">feet)</span></code> combined with <code class="docutils literal notranslate"><span class="pre">clock_input</span></code> to represent different gait types:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># In go2_wtw.py</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compute_observations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Computes observations</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">obs_buf</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands_scale</span><span class="p">,</span>    <span class="c1"># cmd     3</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">projected_gravity</span><span class="p">,</span>                        <span class="c1"># g       3</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">base_ang_vel</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_scales</span><span class="o">.</span><span class="n">ang_vel</span><span class="p">,</span>   <span class="c1"># omega   3</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">dof_pos</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">default_dof_pos</span><span class="p">)</span> <span class="o">*</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">obs_scales</span><span class="o">.</span><span class="n">dof_pos</span><span class="p">,</span>                       <span class="c1"># p_t     12</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">dof_vel</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_scales</span><span class="o">.</span><span class="n">dof_vel</span><span class="p">,</span>        <span class="c1"># dp_t    12</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">actions</span><span class="p">,</span>                                  <span class="c1"># a_{t-1} 12</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">clock_input</span><span class="p">,</span>                              <span class="c1"># clock   4</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gait_period</span><span class="p">,</span>                              <span class="c1"># gait period 1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base_height_target</span><span class="p">,</span>                       <span class="c1"># base height target 1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">foot_clearance_target</span><span class="p">,</span>                    <span class="c1"># foot clearance target 1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pitch_target</span><span class="p">,</span>                             <span class="c1"># pitch target 1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">theta</span><span class="p">,</span>                                    <span class="c1"># theta, gait offset, 4</span>
+        <span class="p">),</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p>Here, the gait specification method we use is based on the principle in <a class="reference external" href="https://arxiv.org/abs/2011.01387">Siekmann <span class="math notranslate nohighlight">\(\textit{et al.}\)</span></a>. Building upon their principle, we provide an extra step function implementaion to construct gait indicators:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># In go2_wtw.py</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_uniped_periodic_gait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">foot_type</span><span class="p">):</span>
+        <span class="c1"># q_frc and q_spd</span>
+        <span class="k">if</span> <span class="n">foot_type</span> <span class="o">==</span> <span class="s2">&quot;FL&quot;</span><span class="p">:</span>
+            <span class="n">q_frc</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">link_contact_forces</span><span class="p">[:,</span> 
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">feet_indices</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">:],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">q_spd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">feet_vel</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># sequence of feet_pos is FL, FR, RL, RR</span>
+            <span class="c1"># size: num_envs; need to reshape to (num_envs, 1), or there will be error due to broadcasting</span>
+            <span class="c1"># modulo phi over 1.0 to get cicular phi in [0, 1.0]</span>
+            <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phi</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">theta</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">%</span> <span class="mf">1.0</span>
+        <span class="k">elif</span> <span class="n">foot_type</span> <span class="o">==</span> <span class="s2">&quot;FR&quot;</span><span class="p">:</span>
+            <span class="n">q_frc</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">link_contact_forces</span><span class="p">[:,</span> 
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">feet_indices</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">:],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">q_spd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">feet_vel</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">:],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># modulo phi over 1.0 to get cicular phi in [0, 1.0]</span>
+            <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phi</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">theta</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">%</span> <span class="mf">1.0</span>
+        <span class="k">elif</span> <span class="n">foot_type</span> <span class="o">==</span> <span class="s2">&quot;RL&quot;</span><span class="p">:</span>
+            <span class="n">q_frc</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">link_contact_forces</span><span class="p">[:,</span> 
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">feet_indices</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">:],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">q_spd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">feet_vel</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">:],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># modulo phi over 1.0 to get cicular phi in [0, 1.0]</span>
+            <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phi</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">theta</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">%</span> <span class="mf">1.0</span>
+        <span class="k">elif</span> <span class="n">foot_type</span> <span class="o">==</span> <span class="s2">&quot;RR&quot;</span><span class="p">:</span>
+            <span class="n">q_frc</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">link_contact_forces</span><span class="p">[:,</span> 
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">feet_indices</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">:],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">q_spd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">feet_vel</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">:],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># modulo phi over 1.0 to get cicular phi in [0, 1.0]</span>
+            <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">phi</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">theta</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">%</span> <span class="mf">1.0</span>
+        
+        <span class="n">phi</span> <span class="o">*=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">pi</span>  <span class="c1"># convert phi to radians</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gait_function_type</span> <span class="o">==</span> <span class="s2">&quot;smooth&quot;</span><span class="p">:</span>
+            <span class="c1"># coefficient</span>
+            <span class="n">c_swing_spd</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># speed is not penalized during swing phase</span>
+            <span class="n">c_swing_frc</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># force is penalized during swing phase</span>
+            <span class="n">c_stance_spd</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># speed is penalized during stance phase</span>
+            <span class="n">c_stance_frc</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># force is not penalized during stance phase</span>
+            
+            <span class="c1"># clip the value of phi to [0, 1.0]. The vonmises function in scipy may return cdf outside [0, 1.0]</span>
+            <span class="n">F_A_swing</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">vonmises</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">a_swing</span><span class="p">,</span> 
+                <span class="n">kappa</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">kappa</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">phi</span><span class="o">.</span><span class="n">cpu</span><span class="p">()),</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+            <span class="n">F_B_swing</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">vonmises</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">b_swing</span><span class="o">.</span><span class="n">cpu</span><span class="p">(),</span> 
+                <span class="n">kappa</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">kappa</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">phi</span><span class="o">.</span><span class="n">cpu</span><span class="p">()),</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+            <span class="n">F_A_stance</span> <span class="o">=</span> <span class="n">F_B_swing</span>
+            <span class="n">F_B_stance</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">vonmises</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">b_stance</span><span class="p">,</span>
+                <span class="n">kappa</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">kappa</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">phi</span><span class="o">.</span><span class="n">cpu</span><span class="p">()),</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+
+            <span class="c1"># calc the expected C_spd and C_frc according to the formula in the paper</span>
+            <span class="n">exp_swing_ind</span> <span class="o">=</span> <span class="n">F_A_swing</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">F_B_swing</span><span class="p">)</span>
+            <span class="n">exp_stance_ind</span> <span class="o">=</span> <span class="n">F_A_stance</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">F_B_stance</span><span class="p">)</span>
+            <span class="n">exp_C_spd_ori</span> <span class="o">=</span> <span class="n">c_swing_spd</span> <span class="o">*</span> <span class="n">exp_swing_ind</span> <span class="o">+</span> <span class="n">c_stance_spd</span> <span class="o">*</span> <span class="n">exp_stance_ind</span>
+            <span class="n">exp_C_frc_ori</span> <span class="o">=</span> <span class="n">c_swing_frc</span> <span class="o">*</span> <span class="n">exp_swing_ind</span> <span class="o">+</span> <span class="n">c_stance_frc</span> <span class="o">*</span> <span class="n">exp_stance_ind</span>
+
+            <span class="c1"># just the code above can&#39;t result in the same reward curve as the paper</span>
+            <span class="c1"># a little trick is implemented to make the reward curve same as the paper</span>
+            <span class="c1"># first let all envs get the same exp_C_frc and exp_C_spd</span>
+            <span class="n">exp_C_frc</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">-</span> <span class="n">exp_C_spd_ori</span><span class="p">)</span>
+            <span class="n">exp_C_spd</span> <span class="o">=</span> <span class="n">exp_C_spd_ori</span>
+            <span class="c1"># select the envs that are in swing phase</span>
+            <span class="n">is_in_swing</span> <span class="o">=</span> <span class="p">(</span><span class="n">phi</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a_swing</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">phi</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">b_swing</span><span class="p">)</span>
+            <span class="n">indices_in_swing</span> <span class="o">=</span> <span class="n">is_in_swing</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">as_tuple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="c1"># update the exp_C_frc and exp_C_spd of the envs in swing phase</span>
+            <span class="n">exp_C_frc</span><span class="p">[</span><span class="n">indices_in_swing</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp_C_frc_ori</span><span class="p">[</span><span class="n">indices_in_swing</span><span class="p">]</span>
+            <span class="n">exp_C_spd</span><span class="p">[</span><span class="n">indices_in_swing</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">+</span> \
+                <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">-</span> <span class="n">exp_C_frc_ori</span><span class="p">[</span><span class="n">indices_in_swing</span><span class="p">])</span>
+
+            <span class="c1"># Judge if it&#39;s the standing gait</span>
+            <span class="n">is_standing</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b_swing</span><span class="p">[:]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">a_swing</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span>
+                <span class="n">as_tuple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="n">exp_C_frc</span><span class="p">[</span><span class="n">is_standing</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">exp_C_spd</span><span class="p">[</span><span class="n">is_standing</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">gait_function_type</span> <span class="o">==</span> <span class="s2">&quot;step&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&#39;&#39;&#39; ***** Step Gait Indicator ***** &#39;&#39;&#39;</span>
+            <span class="n">exp_C_frc</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_envs</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+            <span class="n">exp_C_spd</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_envs</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+            
+            <span class="n">swing_indices</span> <span class="o">=</span> <span class="p">(</span><span class="n">phi</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a_swing</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">phi</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">b_swing</span><span class="p">)</span>
+            <span class="n">swing_indices</span> <span class="o">=</span> <span class="n">swing_indices</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">as_tuple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="n">stance_indices</span> <span class="o">=</span> <span class="p">(</span><span class="n">phi</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b_swing</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">phi</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">b_stance</span><span class="p">)</span>
+            <span class="n">stance_indices</span> <span class="o">=</span> <span class="n">stance_indices</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">as_tuple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="n">exp_C_frc</span><span class="p">[</span><span class="n">swing_indices</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">exp_C_spd</span><span class="p">[</span><span class="n">swing_indices</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">exp_C_frc</span><span class="p">[</span><span class="n">stance_indices</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">exp_C_spd</span><span class="p">[</span><span class="n">stance_indices</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">exp_C_spd</span> <span class="o">*</span> <span class="n">q_spd</span> <span class="o">+</span> <span class="n">exp_C_frc</span> <span class="o">*</span> <span class="n">q_frc</span><span class="p">,</span> \
+            <span class="n">exp_C_spd</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">),</span> <span class="n">exp_C_frc</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_reward_quad_periodic_gait</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">quad_reward_fl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_C_spd_fl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_C_frc_fl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uniped_periodic_gait</span><span class="p">(</span>
+            <span class="s2">&quot;FL&quot;</span><span class="p">)</span>
+        <span class="n">quad_reward_fr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_C_spd_fr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_C_frc_fr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uniped_periodic_gait</span><span class="p">(</span>
+            <span class="s2">&quot;FR&quot;</span><span class="p">)</span>
+        <span class="n">quad_reward_rl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_C_spd_rl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_C_frc_rl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uniped_periodic_gait</span><span class="p">(</span>
+            <span class="s2">&quot;RL&quot;</span><span class="p">)</span>
+        <span class="n">quad_reward_rr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_C_spd_rr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exp_C_frc_rr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uniped_periodic_gait</span><span class="p">(</span>
+            <span class="s2">&quot;RR&quot;</span><span class="p">)</span>
+        <span class="c1"># reward for the whole body</span>
+        <span class="n">quad_reward</span> <span class="o">=</span> <span class="n">quad_reward_fl</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">+</span> <span class="n">quad_reward_fr</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">+</span> \
+            <span class="n">quad_reward_rl</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">+</span> <span class="n">quad_reward_rr</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">quad_reward</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>One can choose to use either <code class="docutils literal notranslate"><span class="pre">gait_function_type</span></code> (specified in <code class="docutils literal notranslate"><span class="pre">go2_wtw_config.py</span></code>). Below are curves of <code class="docutils literal notranslate"><span class="pre">exp_C_frc</span></code> using <code class="docutils literal notranslate"><span class="pre">smooth_function(kappa=20)</span></code> and <code class="docutils literal notranslate"><span class="pre">step_function</span></code>:</p>
+<figure class="align-default">
+<img alt="../../_images/exp_C_frc_smooth_gait.png" src="../../_images/exp_C_frc_smooth_gait.png" />
+</figure>
+<figure class="align-default">
+<img alt="../../_images/exp_C_frc_step_gait.png" src="../../_images/exp_C_frc_step_gait.png" />
+</figure>
+<p>Based on our practice, there’s no much difference in terms of gait tracking performance between <code class="docutils literal notranslate"><span class="pre">step</span> <span class="pre">function</span></code> and <code class="docutils literal notranslate"><span class="pre">smooth</span> <span class="pre">function</span></code>.</p>
+</section>
+<section id="task-rewards">
+<h2>Task Rewards<a class="headerlink" href="#task-rewards" title="Permalink to this heading">#</a></h2>
+<p>To guide the policy to optimize towards the direction of achieving desired behavior, we need to construct rewards incorporating behavior parameters.</p>
+<p>For our implementation, behavior task rewards include <code class="docutils literal notranslate"><span class="pre">_reward_quad_periodic_gait</span></code>, <code class="docutils literal notranslate"><span class="pre">_reward_tracking_base_height</span></code>, <code class="docutils literal notranslate"><span class="pre">_reward_tracking_orientation</span></code> and <code class="docutils literal notranslate"><span class="pre">_reward_tracking_foot_clearance</span></code>. Readers can refer to go2_wtw.py for line-by-line codes.</p>
+</section>
+<section id="reward-based-curriculum">
+<h2>Reward-based Curriculum<a class="headerlink" href="#reward-based-curriculum" title="Permalink to this heading">#</a></h2>
+<p>As stated by Rudin <span class="math notranslate nohighlight">\(\textit{et al.}^{3}\)</span>, proper curriculum design can foster the learning process and help the robot learn more difficult behavior. We implement a reward-based curriculum similar to <a class="reference external" href="https://github.com/leggedrobotics/legged_gym">legged_gym</a> to enlarge the range of behavior parameters only if the policy has mastered the behavior well enough in the current range:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_update_behavior_param_curriculum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env_ids</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">env_ids</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="c1"># Widen the behavior param range according to reward values</span>
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">episode_sums</span><span class="p">[</span><span class="s2">&quot;quad_periodic_gait&quot;</span><span class="p">][</span><span class="n">env_ids</span><span class="p">])</span> <span class="o">/</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_episode_length</span> <span class="o">&gt;</span> <span class="mf">0.8</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">reward_scales</span><span class="p">[</span><span class="s2">&quot;quad_periodic_gait&quot;</span><span class="p">]:</span> <span class="c1"># 0.8 for step gait, 0.5 for smooth gait</span>
+            <span class="c1"># gait period</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gait_period_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gait_period_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.05</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gait_period_min</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gait_period_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gait_period_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gait_period_max</span><span class="p">)</span>
+            <span class="c1"># gait number</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">num_gaits</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_gaits</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_gait_max</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">episode_sums</span><span class="p">[</span><span class="s2">&quot;tracking_base_height&quot;</span><span class="p">][</span><span class="n">env_ids</span><span class="p">])</span> <span class="o">/</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_episode_length</span> <span class="o">&gt;</span> <span class="mf">0.9</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">reward_scales</span><span class="p">[</span><span class="s2">&quot;tracking_base_height&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base_height_target_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_height_target_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.02</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_height_target_min</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base_height_target_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_height_target_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.02</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_height_target_max</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">episode_sums</span><span class="p">[</span><span class="s2">&quot;tracking_foot_clearance&quot;</span><span class="p">][</span><span class="n">env_ids</span><span class="p">])</span> <span class="o">/</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_episode_length</span> <span class="o">&gt;</span> <span class="mf">0.8</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">reward_scales</span><span class="p">[</span><span class="s2">&quot;tracking_foot_clearance&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">foot_clearance_target_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">foot_clearance_target_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.01</span><span class="p">,</span> 
+                                                      <span class="bp">self</span><span class="o">.</span><span class="n">foot_clearance_target_min</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">foot_clearance_target_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">foot_clearance_target_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.01</span><span class="p">,</span> 
+                                                      <span class="bp">self</span><span class="o">.</span><span class="n">foot_clearance_target_max</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">episode_sums</span><span class="p">[</span><span class="s2">&quot;tracking_orientation&quot;</span><span class="p">][</span><span class="n">env_ids</span><span class="p">])</span> <span class="o">/</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_episode_length</span> <span class="o">&gt;</span> <span class="mf">0.9</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">reward_scales</span><span class="p">[</span><span class="s2">&quot;tracking_orientation&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pitch_target_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pitch_target_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.05</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pitch_target_min</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pitch_target_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pitch_target_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pitch_target_max</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="demonstration">
+<h2>Demonstration<a class="headerlink" href="#demonstration" title="Permalink to this heading">#</a></h2>
+<p>We provide an implementation of <span class="math notranslate nohighlight">\( \textit{Walk These Ways} \)</span> in <code class="docutils literal notranslate"><span class="pre">go2_deploy</span></code>, you can run it using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./go2_deploy<span class="w"> </span>wtw
+</pre></div>
+</div>
+<p>The demo video is as follows:
+<video preload="auto" controls="True" width="100%"></p>
+<source src="https://github.com/lupinjia/genesis_lr/raw/main/docs/source/_static/videos/wtw_demo.mp4" type="video/mp4">
+</video>
+<video preload="auto" controls="True" width="100%">
+<source src="https://github.com/lupinjia/genesis_lr/raw/main/docs/source/_static/videos/wtw_demo_real.mp4" type="video/mp4">
+</video>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://gmargo11.github.io/walk-these-ways/">Walk These Ways</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2011.01387">Sim-to-Real Learning of All Common Bipedal Gaits via Periodic Reward Composition</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2109.11978">Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning</a></p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../getting_started/code_architecture.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">🧬Code Architecture</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="teacher_student.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">🧑‍🏫🧑‍🏫 Teacher-Student Framework</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-related-observation">Task-related Observation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-rewards">Task Rewards</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reward-based-curriculum">Reward-based Curriculum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demonstration">Demonstration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/lupinjia/genesis_lr/edit/dev//source/user_guide/blind_locomotion/walk_these_ways.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/user_guide/blind_locomotion/walk_these_ways.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, lupinjia.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

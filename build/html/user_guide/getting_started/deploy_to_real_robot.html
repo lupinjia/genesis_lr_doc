@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>⬇️Deploy to Real Robot &#8212; genesis_lr  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/getting_started/deploy_to_real_robot';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="🧬Code Architecture" href="code_architecture.html" />
+    <link rel="prev" title="🚀Quick Start" href="quick_start.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">genesis_lr  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">🛠️Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">🚀Quick Start</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">⬇️Deploy to Real Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_architecture.html">🧬Code Architecture</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Blind Locomotion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../blind_locomotion/walk_these_ways.html">⛕ Walk These Ways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blind_locomotion/teacher_student.html">🧑‍🏫🧑‍🏫 Teacher-Student Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blind_locomotion/explicit_estimator.html">⏱️ Explicit Estimator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blind_locomotion/sim2real_skills.html">Sim2real Skills</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Guide</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">⬇️Deploy to Real Robot</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="deploy-to-real-robot">
+<h1>⬇️Deploy to Real Robot<a class="headerlink" href="#deploy-to-real-robot" title="Permalink to this heading">#</a></h1>
+<p>In last subsection, we have briefly learned how to start a training session and play the resultant policy in the simulator. The next question is, how to deploy the policy to the real robot, interacting with the dynamics in the real world?</p>
+<section id="preliminaries">
+<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Permalink to this heading">#</a></h2>
+<p>With the knowledge of Reinforcement Learning<span class="math notranslate nohighlight">\(^{1,2}\)</span>, we know that we want to find an agent <span class="math notranslate nohighlight">\(\pi\)</span> that can maximize the discounted accumulative reward. The agent is represented by a neural network which outputs actions based on the observation. In the simplest setup, the observation usually consists of base angular velocities, base orientation, velocity commands, joint angles, joint angular velocities and actions of last timestep. Though you may have seen base linear velocities in <code class="docutils literal notranslate"><span class="pre">legged_robot.py</span></code> (code block below), this information can not be obtained directly through sensors on the robot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">obs_buf</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">base_lin_vel</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_scales</span><span class="o">.</span><span class="n">lin_vel</span><span class="p">,</span>                    <span class="c1"># 3</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">base_ang_vel</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_scales</span><span class="o">.</span><span class="n">ang_vel</span><span class="p">,</span>                   <span class="c1"># 3</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">projected_gravity</span><span class="p">,</span>                                         <span class="c1"># 3</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands_scale</span><span class="p">,</span>                   <span class="c1"># 3</span>
+                            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">dof_pos</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">default_dof_pos</span><span class="p">)</span> 
+                                      <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_scales</span><span class="o">.</span><span class="n">dof_pos</span><span class="p">,</span> <span class="c1"># num_dofs</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">simulator</span><span class="o">.</span><span class="n">dof_vel</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_scales</span><span class="o">.</span><span class="n">dof_vel</span><span class="p">,</span>                         <span class="c1"># num_dofs</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">actions</span>                                                    <span class="c1"># num_actions</span>
+                            <span class="p">),</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Typically, sensors mounted on the robot include Inertial Measurement Unit (IMU) and joint encoders. Through IMU, we can obtain base angular velocities and base orientation (equivalent to projected_gravity above). Joint angles and joint angular velocities can be accessed via joint encoders.</p>
+<p>To obtain base linear velocities, we need to conduct estimation based on other sensors using methods like Kalman Filter or estimator network (which will be explained afterwardsafter). Here we focus on exploiting other available information to make the robot walk successfully.</p>
+</section>
+<section id="modify-observations">
+<h2>Modify Observations<a class="headerlink" href="#modify-observations" title="Permalink to this heading">#</a></h2>
+<p>To deploy the policy to the real robot, we need to make sure that observations are all available in the real robot. So we need to delete <code class="docutils literal notranslate"><span class="pre">base_lin_vel</span></code> from obs and train a new policy.</p>
+<p>To see the reward curves and loss curves, you can utilize tensorboard or wandb. By default, the training data will be syncronized to wandb on the cloud. Comparing the session with <code class="docutils literal notranslate"><span class="pre">base_lin_vel</span></code> and without it, you may find that the reward curves of the one without <code class="docutils literal notranslate"><span class="pre">base_lin_vel</span></code> rises slower and even drops at the end of the training. That’s mainly due to the lack of information.</p>
+<figure class="align-default">
+<img alt="../../_images/compare_with_and_wo_lin_vel.png" src="../../_images/compare_with_and_wo_lin_vel.png" />
+</figure>
+</section>
+<section id="sim2sim-in-mujoco">
+<h2>Sim2Sim in Mujoco<a class="headerlink" href="#sim2sim-in-mujoco" title="Permalink to this heading">#</a></h2>
+<p>Before deploying to the real robot, it’s better to deploy the policy to another simulator. In this way, you can test your policy’s robustness and avoid potential collapse on the real robot. To use this feature, you need to first install go2_deploy following the instructions in <a class="reference internal" href="installation.html"><span class="std std-doc">Installation</span></a>.</p>
+<p>After executing <code class="docutils literal notranslate"><span class="pre">play.py</span></code> with <code class="docutils literal notranslate"><span class="pre">EXPORT_POLICY=True</span></code>, you will find a folder named <code class="docutils literal notranslate"><span class="pre">exported</span></code> in the specified <code class="docutils literal notranslate"><span class="pre">load_run</span></code> directory. Under this directory, you will find a JIT script file (.pt) which can be deployed.</p>
+<p>Essentially, what the deployment code does is to align the input and output of the control policy. For input, you need to put the feedback information just the same as your training code. For output, you need to align the response of the real electric motor with that in the simulation.</p>
+<p>We have provided a <code class="docutils literal notranslate"><span class="pre">SimpleRLController</span></code> in <a class="reference external" href="https://github.com/lupinjia/go2_deploy/tree/main">go2_deploy</a> for you to deploy this simplest control policy, execute the following command after compiling:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Under go2_deploy/build</span>
+./go2_deploy<span class="w"> </span>simple_rl
+
+<span class="c1"># Under go2_deploy/unitree_mujoco/simulate/build</span>
+./unitree_mujoco
+</pre></div>
+</div>
+<p>Here is the demo video for the locomotion:</p>
+<video preload="auto" controls="True" width="100%">
+<source src="https://github.com/lupinjia/genesis_lr/raw/main/docs/source/_static/videos/simple_rl_demo.mp4" type="video/mp4">
+</video>
+<p>You can see that this quadruped robot can walk as our desired velocity commands, which are specified through the joystick. But this policy is just a simplest version, it struggles with external disturbances and complex terrains.</p>
+</section>
+<section id="id1">
+<h2>Deploy to Real Robot<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>To deploy the a real go2 robot, you need to modify the network interface for the program. Check you ethernet interface through <code class="docutils literal notranslate"><span class="pre">ifconfig</span></code>:</p>
+<figure class="align-default">
+<img alt="../../_images/ifconfig_output.jpeg" src="../../_images/ifconfig_output.jpeg" />
+</figure>
+<p>We can see that the ethernet interface of this PC is <code class="docutils literal notranslate"><span class="pre">enp4s0</span></code>. Then we can connect this PC with <code class="docutils literal notranslate"><span class="pre">go2</span></code> through ethernet and execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./go2_deploy<span class="w"> </span>simple_rl<span class="w"> </span>enp4s0
+</pre></div>
+</div>
+<p>You will see the robot locomotes in a way that is not so different from the simulation.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://hrl.boyuai.com/">Hands on RL</a></p></li>
+<li><p><a class="reference external" href="https://datawhalechina.github.io/easy-rl/#/">Easy RL</a></p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="quick_start.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">🚀Quick Start</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="code_architecture.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">🧬Code Architecture</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-observations">Modify Observations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sim2sim-in-mujoco">Sim2Sim in Mujoco</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Deploy to Real Robot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/lupinjia/genesis_lr/edit/dev//source/user_guide/getting_started/deploy_to_real_robot.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/user_guide/getting_started/deploy_to_real_robot.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, lupinjia.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

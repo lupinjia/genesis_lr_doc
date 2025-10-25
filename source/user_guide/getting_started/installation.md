@@ -69,6 +69,27 @@ If a window like below appears, the installation is successful.
 ```{figure} ../../_static/images/genesis_installation_success.png
 ```
 
+:::{note}
+Comment following lines in `_set_dofs_info()` of `Genesis/genesis/engine/solvers/rigid/rigid_solvers_decomp.py`:
+
+```python
+elif name == "armature":
+        kernel_set_dofs_armature(tensor_list[0], dofs_idx, envs_idx_, self.dofs_info, self._static_rigid_sim_config)
+        # qs_idx = torch.arange(self.n_qs, dtype=gs.tc_int, device=gs.device)
+        # qpos_cur = self.get_qpos(envs_idx=envs_idx, qs_idx=qs_idx, unsafe=unsafe)
+        # self._init_invweight_and_meaninertia(envs_idx=envs_idx, force_update=True, unsafe=unsafe)
+        # self.set_qpos(qpos_cur, qs_idx=qs_idx, envs_idx=envs_idx, unsafe=unsafe)
+```
+
+If errors like this appears:
+```bash
+GenesisException: Links and dofs must be batched to selectively update invweight and meaninertia for some environment
+```
+
+:::
+
+
+
 Finally, you need to register a wandb account and set the environment variable:
 ```bash
 export WANDB_API_KEY=<your_api_key>

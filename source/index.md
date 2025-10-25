@@ -23,7 +23,7 @@ genesis_lr is a training framework for robot control based on RL (Reinforcement 
 
 | Name  | Gensis | IsaacGym | Real Robot | Video |
 | ----- | ------ | -------- | ---------  | ----- |
-| Walk These Ways | ✅ | ✅ | ✅ | [video_link](https://www.bilibili.com/video/BV1FPedzZEdi/) |
+| Walk These Ways (Go2) | ✅ | ✅ | ✅ | [video_link](https://www.bilibili.com/video/BV1FPedzZEdi/) |
 | One-Stage Teacher-Student | ✅ | ✅ |
 | |
 

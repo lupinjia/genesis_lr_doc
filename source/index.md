@@ -1,6 +1,6 @@
 # genesis_lr
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/lupinjia/genesis_lr)](https://github.com/lupinjia/genesis_lr)
+![GitHub Repo stars](https://img.shields.io/github/stars/lupinjia/genesis_lr)
 
 ## Introduction
 

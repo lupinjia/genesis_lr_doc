@@ -199,6 +199,18 @@ def _update_behavior_param_curriculum(self, env_ids):
             self.pitch_target_range[1] = min(self.pitch_target_range[1] + 0.05, self.pitch_target_max)
 ```
 
+## Train and Play
+
+To train a walk these ways policy, type the following command:
+```bash
+python train.py --task=go2_wtw --headless
+```
+
+To play it, after setting `load_run` in config, type the following command:
+```bash
+python play.py --task=go2_wtw
+```
+
 ## Demonstration
 
 We provide an implementation of $ \textit{Walk These Ways} $ in `go2_deploy`, you can run it using the following command:
@@ -208,11 +220,11 @@ We provide an implementation of $ \textit{Walk These Ways} $ in `go2_deploy`, yo
 
 The demo video is as follows:
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/lupinjia/genesis_lr/raw/main/docs/source/_static/videos/wtw_demo.mp4" type="video/mp4">
+<source src="https://github.com/lupinjia/genesis_lr_doc/raw/main/docs/source/_static/videos/wtw_demo.mp4" type="video/mp4">
 </video>
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/lupinjia/genesis_lr/raw/main/docs/source/_static/videos/wtw_demo_real.mp4" type="video/mp4">
+<source src="https://github.com/lupinjia/genesis_lr_doc/raw/main/docs/source/_static/videos/wtw_demo_real.mp4" type="video/mp4">
 </video>
 
 

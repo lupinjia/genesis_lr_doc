@@ -69,27 +69,6 @@ If a window like below appears, the installation is successful.
 ```{figure} ../../_static/images/genesis_installation_success.png
 ```
 
-:::{note}
-Comment following lines in `_set_dofs_info()` of `Genesis/genesis/engine/solvers/rigid/rigid_solvers_decomp.py`:
-
-```python
-elif name == "armature":
-        kernel_set_dofs_armature(tensor_list[0], dofs_idx, envs_idx_, self.dofs_info, self._static_rigid_sim_config)
-        # qs_idx = torch.arange(self.n_qs, dtype=gs.tc_int, device=gs.device)
-        # qpos_cur = self.get_qpos(envs_idx=envs_idx, qs_idx=qs_idx, unsafe=unsafe)
-        # self._init_invweight_and_meaninertia(envs_idx=envs_idx, force_update=True, unsafe=unsafe)
-        # self.set_qpos(qpos_cur, qs_idx=qs_idx, envs_idx=envs_idx, unsafe=unsafe)
-```
-
-If errors like this appears:
-```bash
-GenesisException: Links and dofs must be batched to selectively update invweight and meaninertia for some environment
-```
-
-:::
-
-
-
 Finally, you need to register a wandb account and set the environment variable:
 ```bash
 export WANDB_API_KEY=<your_api_key>
@@ -97,10 +76,21 @@ export WANDB_API_KEY=<your_api_key>
 
 ## Optional Installation
 
-### Sim2Sim Support
+### Unitree Go2 Sim2Sim
 
 Deploying the policy to another simulator can effectively test the robustness of the policy. Also, the code used for sim2sim can oftern be deployed directly to the real robot. To avoid potential collapse on the real robot, it's better to first test the deployment code in simulation. 
 
 Since deployment codes are usually written in C++, a simulator which supports C++ interface is ideal. We offer a sim2sim framework in mujoco based on [unitree_sdk2](https://github.com/unitreerobotics/unitree_sdk2), [unitree_mujoco](https://github.com/unitreerobotics/unitree_mujoco) and [LibTorch](https://pytorch.org/).
 
-You can install this [go2_deploy](https://github.com/lupinjia/go2_deploy/tree/main) repo according to the instructions in README.md.
+For the simulator, you can install [unitree_mujoco](https://github.com/lupinjia/unitree_mujoco) according to the instructions in README.md.
+
+For the deployment code, you can refer to [go2_deploy](https://github.com/lupinjia/go2_deploy) and [go2_deploy_python](https://github.com/lupinjia/go2_deploy_python).
+
+Below is the interface of unitree_mujoco. I have implemented depth image access and publication through dds.
+
+```{figure} ../../_static/images/unitree_mujoco_demo.gif
+```
+
+### TRON1_PF Sim2Sim
+
+For sim2sim of TRON1_PF, you can install [tron1-mujoco-sim](https://github.com/limxdynamics/tron1-mujoco-sim) and [tron1-rl-deploy-python](https://github.com/lupinjia/tron1-rl-deploy-python) provided by us.

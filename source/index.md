@@ -18,14 +18,14 @@ genesis_lr is a training framework for robot control based on RL (Reinforcement 
     | One-Stage Teacher-Student | [Rapid Locomotion via Reinforcement Learning](https://agility.csail.mit.edu/) | [go2_ts](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/go2/go2_ts) | [teacher_student](./user_guide/blind_locomotion/teacher_student.md) |
     | EstimatorNet | [Concurrent Training of a Control Policy and a State Estimator for Dynamic and Robust Legged Locomotion](https://arxiv.org/abs/2202.05481) | [go2_ee](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/go2/go2_ee) | [explicit_estimator](./user_guide/blind_locomotion/explicit_estimator.md) |
     | Constraints as Terminations | [CaT: Constraints as Terminations for Legged Locomotion Reinforcement Learning](https://constraints-as-terminations.github.io/) | [go2_cat](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/go2/go2_cat) | |
+    | DreamWaQ | [DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning](https://arxiv.org/abs/2301.10602) | [go2_dreamwaq](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/go2/go2_dreamwaq) | |
 
-## Implemented Demos
+## Gallery
 
-| Name  | Gensis | IsaacGym | Real Robot | Video |
-| ----- | ------ | -------- | ---------  | ----- |
-| Walk These Ways (Go2) | ✅ | ✅ | ✅ | [video_link](https://www.bilibili.com/video/BV1FPedzZEdi/) |
-| One-Stage Teacher-Student | ✅ | ✅ |
-| |
+| Robot | Sim | Real |
+|--- | --- | --- |
+| Unitree Go2 | ![](https://raw.githubusercontent.com/lupinjia/demo_imgs/refs/heads/master/ee_demo.gif) | [video](https://www.bilibili.com/video/BV1FPedzZEdi/) |
+| TRON1_PF | ![](https://raw.githubusercontent.com/lupinjia/genesis_lr/refs/heads/main/resources/images/tron1_pf_rough_demo.gif) | [video](https://www.bilibili.com/video/BV1MdePzcEvk/?spm_id_from=333.1387.homepage.video_card.click&vd_source=50fc92fb0e7291031bbb72e3c05b2edc) |
 
 ```{toctree}
 :maxdepth: 1

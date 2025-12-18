@@ -216,7 +216,8 @@ In the original teacher-student paper$^1$, authors used TCN as the body of stude
 
 Here we show the demo of running a policy trained using teacher-student framework with a history length of 20.
 
-
+```{figure} ../../_static/images/ts_demo.gif
+```
 
 ## References
 

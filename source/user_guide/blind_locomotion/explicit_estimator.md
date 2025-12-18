@@ -17,6 +17,13 @@ The implementation of this method is similar with [teacher_student framework](te
 
 ## Demonstration
 
+Unitree Go2:
+
+```{figure} ../../_static/images/ee_demo.gif
+```
+
+TRON1_PF:
+
 
 
 

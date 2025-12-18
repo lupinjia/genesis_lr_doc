@@ -94,3 +94,6 @@ Below is the interface of unitree_mujoco. I have implemented depth image access 
 ### TRON1_PF Sim2Sim
 
 For sim2sim of TRON1_PF, you can install [tron1-mujoco-sim](https://github.com/limxdynamics/tron1-mujoco-sim) and [tron1-rl-deploy-python](https://github.com/lupinjia/tron1-rl-deploy-python) provided by us.
+
+```{figure} ../../_static/images/tron1_pf_ee_demo.gif
+```

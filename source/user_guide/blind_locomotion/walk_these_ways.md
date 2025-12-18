@@ -220,11 +220,11 @@ We provide an implementation of $ \textit{Walk These Ways} $ in `go2_deploy`, yo
 
 The demo video is as follows:
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/lupinjia/genesis_lr_doc/raw/main/docs/source/_static/videos/wtw_demo.mp4" type="video/mp4">
+<source src="https://github.com/lupinjia/genesis_lr_doc/raw/refs/heads/main/source/_static/videos/wtw_demo.mp4" type="video/mp4">
 </video>
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/lupinjia/genesis_lr_doc/raw/main/docs/source/_static/videos/wtw_demo_real.mp4" type="video/mp4">
+<source src="https://github.com/lupinjia/genesis_lr_doc/raw/refs/heads/main/source/_static/videos/wtw_demo_real.mp4" type="video/mp4">
 </video>
 
 

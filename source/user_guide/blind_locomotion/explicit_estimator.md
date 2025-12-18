@@ -24,7 +24,8 @@ Unitree Go2:
 
 TRON1_PF:
 
-
+```{figure} ../../_static/images/tron1_pf_ee_demo.gif
+```
 
 
 ## References

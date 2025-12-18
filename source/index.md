@@ -24,8 +24,8 @@ genesis_lr is a training framework for robot control based on RL (Reinforcement 
 
 | Robot | Sim | Real |
 |--- | --- | --- |
-| Unitree Go2 | ![](https://raw.githubusercontent.com/lupinjia/demo_imgs/refs/heads/master/ee_demo.gif) | [video](https://www.bilibili.com/video/BV1FPedzZEdi/) |
-| TRON1_PF | ![](https://raw.githubusercontent.com/lupinjia/genesis_lr/refs/heads/main/resources/images/tron1_pf_rough_demo.gif) | [video](https://www.bilibili.com/video/BV1MdePzcEvk/?spm_id_from=333.1387.homepage.video_card.click&vd_source=50fc92fb0e7291031bbb72e3c05b2edc) |
+| Unitree Go2 | ![](./_static/images/ee_demo.gif) | [video](https://www.bilibili.com/video/BV1FPedzZEdi/) |
+| TRON1_PF | ![](./_static/images/tron1_pf_ee_demo.gif) | [video](https://www.bilibili.com/video/BV1MdePzcEvk/?spm_id_from=333.1387.homepage.video_card.click&vd_source=50fc92fb0e7291031bbb72e3c05b2edc) |
 
 ```{toctree}
 :maxdepth: 1

@@ -8,6 +8,7 @@ getting_started/installation
 getting_started/quick_start
 getting_started/deploy_to_real_robot
 getting_started/code_architecture
+getting_started/task_list
 ```
 
 ```{toctree}

@@ -18,7 +18,7 @@ Genesis_lr incoporates two simulators into one framework. One can choose either 
 |-----------|-------------|-------------|
 |  Python   |    3.8      |    >=3.10   |
 |  Nvidia Driver |   535  |     535     |
-|  PyTorch  | 2.4.1+cu121 | 2.7.1+cu118 |
+|  PyTorch  | 2.4.1+cu121 | 2.8.0+cu126 |
 
 ## Direct Installation
 
@@ -57,7 +57,7 @@ If a window like below appears, the installation is successful.
 conda create -n lr_gen python=3.10
 conda activate lr_gen
 # 2. Install Pytorch
-pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu126
 # 3. Install genesis_lr with genesis
 git clone https://github.com/lupinjia/genesis_lr.git
 cd genesis_lr && pip install -e ".[genesis]"

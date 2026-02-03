@@ -1,6 +1,10 @@
 # 📋 Task List
 
-Here we list the tasks supported by genesis_lr. You can start the training through `python legged_gym/scripts/train.py --task=task_name`. More command line parameters can be seen in `legged_gym/utils/helpers.py/get_args()`
+Here we list the tasks supported by genesis_lr. 
+
+- To start the training: `python legged_gym/scripts/train.py --task=task_name`.
+- To visualize the trained model: `python legged_gym/scripts/play.py --task=task_name` 
+- More command line parameters can be seen in `legged_gym/utils/helpers.py/get_args()`
 
 | Robot | Task Name | Description | Paper |
 | ----- | ---- | ----------- | -----------|
@@ -11,5 +15,6 @@ Here we list the tasks supported by genesis_lr. You can start the training throu
 |       | go2_dreamwaq | Implementation of DreamWaQ on go2, for walking on tough terrains | [DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning](https://arxiv.org/abs/2301.10602) |
 |       | go2_cat | Constraints as Terminations on go2, for walking on tough terrains | [CaT: Constraints as Terminations for Legged Locomotion Reinforcement Learning](https://constraints-as-terminations.github.io/) |
 |       | go2_nav | End-to-end local navigation on go2 | [Advanced Skills by Learning Locomotion and Local Navigation End-to-End](https://arxiv.org/abs/2209.12827) |
+|       | go2_cts | Implementation of Concurrent Teacher Student framework | [CTS: Concurrent Teacher-Student Reinforcement Learning for Legged Locomotion](https://clearlab-sustech.github.io/concurrentTS/) |
 | Limx TRON1_PF | tron1_pf | A simple example to train a tron1_pf policy walking on plane | |
 |       | tron1_pf_ee | Implementation of Explciit Estimator on tron1_pf, for walking on tough terrains | [Concurrent Training of a Control Policy and a State Estimator for Dynamic and Robust Legged Locomotion](https://arxiv.org/abs/2202.05481) |

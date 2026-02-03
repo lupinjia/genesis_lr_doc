@@ -1,10 +1,10 @@
-# genesis_lr
+# LeggedGym-Ex
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/lupinjia/genesis_lr)
 
 ## Introduction
 
-genesis_lr is a training framework for robot control based on RL (Reinforcement Learning). It's based on [legged_gym](https://github.com/leggedrobotics/legged_gym) and [rsl_rl](https://github.com/leggedrobotics/rsl_rl) from RSL in ETHZ. 
+LeggedGym-Ex is a training framework for robot control based on RL (Reinforcement Learning). It's based on [legged_gym](https://github.com/leggedrobotics/legged_gym) and [rsl_rl](https://github.com/leggedrobotics/rsl_rl) from RSL in ETHZ. 
 
 ## Features
 
@@ -19,6 +19,8 @@ genesis_lr is a training framework for robot control based on RL (Reinforcement 
     | Explicit Estimator | [Concurrent Training of a Control Policy and a State Estimator for Dynamic and Robust Legged Locomotion](https://arxiv.org/abs/2202.05481) | [go2_ee](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/go2/go2_ee) | [explicit_estimator](./user_guide/blind_locomotion/explicit_estimator.md) |
     | Constraints as Terminations | [CaT: Constraints as Terminations for Legged Locomotion Reinforcement Learning](https://constraints-as-terminations.github.io/) | [go2_cat](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/go2/go2_cat) | |
     | DreamWaQ | [DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning](https://arxiv.org/abs/2301.10602) | [go2_dreamwaq](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/go2/go2_dreamwaq) | |
+    | SPO (Simple Policy Optimization) | [Simple Policy Optimization](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/MyRepositories-hub/Simple-Policy-Optimization&ved=2ahUKEwjL9vLX7auSAxVZlFYBHWkFBkIQFnoECBgQAQ&usg=AOvVaw1nGHIXtdYwpu3WV9lUgRWN) | [`legged_robot_config.py`](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/base/legged_robot_config.py) | |
+    | CTS (Concurrent Teacher Student) | [CTS: Concurrent Teacher-Student Reinforcement Learning for Legged Locomotion](https://clearlab-sustech.github.io/concurrentTS/) | [go2_cts](https://github.com/lupinjia/genesis_lr/tree/main/legged_gym/envs/go2/go2_cts) | |
 
 ## Gallery
 

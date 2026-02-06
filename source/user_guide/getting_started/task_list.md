@@ -17,4 +17,6 @@ Here we list the tasks supported by genesis_lr.
 |       | go2_nav | End-to-end local navigation on go2 | [Advanced Skills by Learning Locomotion and Local Navigation End-to-End](https://arxiv.org/abs/2209.12827) |
 |       | go2_cts | Implementation of Concurrent Teacher Student framework | [CTS: Concurrent Teacher-Student Reinforcement Learning for Legged Locomotion](https://clearlab-sustech.github.io/concurrentTS/) |
 | Limx TRON1_PF | tron1_pf | A simple example to train a tron1_pf policy walking on plane | |
-|       | tron1_pf_ee | Implementation of Explciit Estimator on tron1_pf, for walking on tough terrains | [Concurrent Training of a Control Policy and a State Estimator for Dynamic and Robust Legged Locomotion](https://arxiv.org/abs/2202.05481) |
+|       | tron1_pf_ee | Implementation of Explciit Estimator on tron1_pf, for walking on tough terrains |  |
+| Limx TRON1_SF | tron1_sf | A simple example to train a tron1_sf policy walking on plane | |
+|       | tron1_sf_ee | Implementation of Explciit Estimator on tron1_sf, for walking on tough terrains | |

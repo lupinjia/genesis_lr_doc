@@ -2,7 +2,7 @@
 
 In [teacher_student framework](teacher_student.md), the latent vector output by the teacher encoder is an encoded information of privileged information $x_t$. The latent vector is some kind of representation of the privileged information, without explicit physical meaning. However, according to our experience in [Deploy to Real Robot](https://genesis-lr.readthedocs.io/en/latest/user_guide/getting_started/deploy_to_real_robot.html), the existence of `base_lin_vel` can improve the performance of the agent significantly. Then the problem is how can we obtain `base_lin_vel` in the real robot. 
 
-From the perspective of model-based control, Kalman Filter can help us estimate `base_lin_vel` using feedback of robot states. However, this kind of method usually relies on some assumption, limiting their versatility. With the great power of neural network, how can we handle it? EstimatorNet$^1$ was proposed to solve this. 
+From the perspective of model-based control, Kalman Filter can help us estimate `base_lin_vel` using feedback of robot states. However, this kind of method usually relies on some assumption, limiting their versatility. With the great power of neural network, how can we handle it? [EstimatorNet](https://arxiv.org/abs/2202.05481) was proposed to solve this. 
 
 ## Framework Analysis
 
@@ -15,7 +15,19 @@ Basically, EstimatorNet has the similar form of diagram with [teacher-student fr
 
 The implementation of this method is similar with [teacher_student framework](teacher_student.md). Readers can look through files with suffix of `ee` to find the implementation.
 
+To train a explicit estimator policy, type the following command:
+```bash
+python train.py --task=go2_ee --headless
+```
+
+To play it, type the following command:
+```bash
+python play.py --task=go2_ee --load_run=session_name
+```
+
 ## Demonstration
+
+We have provided reference deployment code of explicit estimator policy in [go2_deploy_python](https://github.com/lupinjia/go2_deploy_python) and [tron1_rl_deploy_python](https://github.com/lupinjia/tron1-rl-deploy-python).
 
 Unitree Go2:
 

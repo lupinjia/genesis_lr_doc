@@ -13,9 +13,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "genesis_lr"
-copyright = "2025, lupinjia"
-author = "lupinjia"
+project = "LeggedGym-Ex"
+copyright = "2025, Yasen Jia"
+author = "Yasen Jia"
 
 
 # -- General configuration ---------------------------------------------------
@@ -53,7 +53,7 @@ html_theme = "pydata_sphinx_theme"
 html_context = {
     "display_github": True,
     "github_user": "lupinjia",
-    "github_repo": "genesis_lr",
+    "github_repo": "LeggedGym-Ex",
     "github_version": "dev",
     "conf_py_path": "/source/",
     "doc_path": "/source",

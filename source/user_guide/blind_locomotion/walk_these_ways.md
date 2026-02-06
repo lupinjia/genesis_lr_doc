@@ -1,7 +1,5 @@
 # ⛕ Walk These Ways
 
-> Code in this section corresponds to `go2_wtw` in genesis_lr.
-
 As stated by Margolis $ \textit{et al.}^{1}$, the multiplicity of behavior (MoB) can help the robot generalize in different ways. The basic idea of $ \textit{Walk These Ways} $ is to learn different behaviors on the flat ground and tune the behavior through high-level decision (which is human operator in this paper).
 
 To incoporate different behaviors into one NN, we essentially want to achieve multi-task reinforcement learning. Key components in this implementation consist of three parts: 
@@ -163,7 +161,7 @@ Based on our practice, there's no much difference in terms of gait tracking perf
 
 To guide the policy to optimize towards the direction of achieving desired behavior, we need to construct rewards incorporating behavior parameters.
 
-For our implementation, behavior task rewards include `_reward_quad_periodic_gait`, `_reward_tracking_base_height`, `_reward_tracking_orientation` and `_reward_tracking_foot_clearance`. Readers can refer to go2_wtw.py for line-by-line codes.
+For our implementation, behavior task rewards include `_reward_quad_periodic_gait`, `_reward_tracking_base_height`, `_reward_tracking_orientation` and `_reward_tracking_foot_clearance`. Readers can refer to `go2_wtw.py` for line-by-line codes.
 
 ## Reward-based Curriculum
 
@@ -206,14 +204,14 @@ To train a walk these ways policy, type the following command:
 python train.py --task=go2_wtw --headless
 ```
 
-To play it, after setting `load_run` in config, type the following command:
+To play it, type the following command:
 ```bash
-python play.py --task=go2_wtw
+python play.py --task=go2_wtw --load_run=session_name
 ```
 
 ## Demonstration
 
-We provide an implementation of $ \textit{Walk These Ways} $ in `go2_deploy`, you can run it using the following command:
+We provide an implementation of $ \textit{Walk These Ways} $ in [go2_deploy](https://github.com/lupinjia/go2_deploy/tree/main), you can run it using the following command:
 ```bash
 ./go2_deploy wtw
 ```

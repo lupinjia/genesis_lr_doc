@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Below table shows the recommended (tested) requirements of the commmmputer for running this framework.
+Below table shows the recommended (tested) requirements of the computer for running this framework.
 
 | Component | Recommended (Tested) |
 |-----------|-------------|
@@ -12,7 +12,7 @@ Below table shows the recommended (tested) requirements of the commmmputer for r
 |   Python  |     >=3.8   |
 |Nvidia Driver|   >=535   |
 
-Genesis_lr incoporates two simulators into one framework. One can choose either simulator to use, with each simulator requiring a seperate conda environment due to the limitation of python versions. Below is the recommended (tested) environment setting for two simulators:
+LeggedGym-Ex incoporates two simulators into one framework. One can choose either simulator to use, with each simulator requiring a seperate conda environment due to the limitation of python versions. Below is the recommended (tested) environment setting for two simulators:
 
 | Component |  IsaacGym   |   Genesis   |
 |-----------|-------------|-------------|
@@ -39,9 +39,9 @@ wget https://developer.nvidia.com/isaac-gym-preview-4 \
 find isaacgym/python -type f -name "*.py" -exec sed -i 's/np\.float/np.float32/g' {} +
 # Install isaacgym in this environment
 cd isaacgym/python && pip install -e . && cd ../..
-# 4. Install genesis_lr with isaacgym
-git clone https://github.com/lupinjia/genesis_lr.git
-cd genesis_lr && pip install -e ".[isaacgym]"
+# 4. Install LeggedGym-Ex with isaacgym
+git clone https://github.com/lupinjia/LeggedGym-Ex.git
+cd LeggedGym-Ex && pip install -e ".[isaacgym]"
 # 5. Test the installation
 python legged_gym/scripts/train.py --task=go2 --num_envs=100
 ```
@@ -58,9 +58,9 @@ conda create -n lr_gen python=3.10
 conda activate lr_gen
 # 2. Install Pytorch
 pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu126
-# 3. Install genesis_lr with genesis
-git clone https://github.com/lupinjia/genesis_lr.git
-cd genesis_lr && pip install -e ".[genesis]"
+# 3. Install LeggedGym-Ex with genesis
+git clone https://github.com/lupinjia/LeggedGym-Ex.git
+cd LeggedGym-Ex && pip install -e ".[genesis]"
 # 4. Test the installation
 python legged_gym/scripts/train.py --task=go2 --num_envs=100
 ```
@@ -86,7 +86,7 @@ For the simulator, you can install [unitree_mujoco](https://github.com/lupinjia/
 
 For the deployment code, you can refer to [go2_deploy](https://github.com/lupinjia/go2_deploy) and [go2_deploy_python](https://github.com/lupinjia/go2_deploy_python).
 
-Below is the interface of unitree_mujoco. I have implemented depth image access and publication through dds.
+Below is the interface of unitree_mujoco. We have implemented depth image access and publication through dds.
 
 ```{figure} ../../_static/images/unitree_mujoco_demo.gif
 ```

@@ -19,7 +19,7 @@ Environments are where the agent collects data and receives reward signal from. 
 
 ## Algorithms (rsl_rl)
 
-Algorithms define reinforment learning algorithms used in training. Currently we implement PPO (Proximal Policy Optimization) and several training architecture based on PPO (Explicit Estimator, Teacher Student). 
+Algorithms define reinforment learning algorithms used in training. Currently we implement PPO (Proximal Policy Optimization), [SPO (Simple Policy Optimizatino)](https://github.com/MyRepositories-hub/Simple-Policy-Optimization) and several training architecture based on them (Explicit Estimator, Teacher Student, Cocurrent TS, DreamWaQ). 
 
 ## Sim2Sim
 

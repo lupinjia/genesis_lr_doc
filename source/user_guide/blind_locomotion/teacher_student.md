@@ -2,7 +2,7 @@
 
 In [Walk These Ways](walk_these_ways.md), we know that through tuning robot behaviors, we can let a policy trained on flat ground traverse some difficult terrains (like small curbs and stairs). It indicates generalization ability of the policy since it has been only trained on flat ground and data concerning complex terrains are not included in the training dataet. However, to achieve better stability and traversability on complex terrains, training on terrains are inavoidable. But as introduced in [deploy_to_real_robot](https://genesis-lr.readthedocs.io/en/latest/user_guide/getting_started/deploy_to_real_robot.html), just a simple network that gets robot state feedback of one time step is not enough. Actually, if you use RNN or stack observation of multiple time steps, the policy will gain better ability to adapt to terrains. However, we still need some mechanism to effectively extract key information from observation history and endow the policy with better understanding of the robot and the surrounding environment.
 
-## Teacher-Student Framework
+## [Teacher-Student Framework](https://arxiv.org/abs/2010.11251)
 
 As one of the pioneer of RL-based control on legged robots, [RSL from ETH zurich](https://rsl.ethz.ch/) has proposed a series of works to push the limit of quadruped robots on complex terrains. The one introduced here is teacher-student framework.
 
@@ -13,11 +13,11 @@ Intuitively, we understand that with privilege information(base_lin_vel, frictio
 
 The privilege encoder(or teacher encoder) encodes privilege information into latent space with the same dimension. The history encoder(or student encoder) infers latent vectors of privilege information from observation history. The policy observes current observation and latent vectors, and outputs actions. 
 
-The original teacher-student framework is a two-stage training framework, where encoder and actor are coupled. The teacher encoder and teacher policy are trained in the first stage, and the student encoder and student policy are trained in the second stage. To simplify the training process, RMA$^2$ proposed to decouple the encoder and policy, only requiring training student encoder in the second stage. Furthermore, RLvRL$^3$ proposed to achieve one-stage training by concurrently conducting reinforcement learning and supervised learning. The above diagram is the same as the method of RLvRL.
+The original teacher-student framework is a two-stage training framework, where encoder and actor are coupled. The teacher encoder and teacher policy are trained in the first stage, and the student encoder and student policy are trained in the second stage. To simplify the training process, [RMA](https://ashish-kmr.github.io/rma-legged-robots/) proposed to decouple the encoder and policy, only requiring training student encoder in the second stage. Furthermore, [RLvRL](https://agility.csail.mit.edu/) proposed to achieve one-stage training by concurrently conducting reinforcement learning and supervised learning. The above diagram is the same as the method of RLvRL.
 
 ## Implementation
 
-We implement a one-stage teacher-student training framework based on RLvRL$^3$. The core modification compared to standard actor-critic is in `actor_critic_ts.py` and `ppo_ts.py`. In `actor_critic_ts.py`, we add privilege encoder and history encoder as neural network modules.
+We implement a one-stage teacher-student training framework based on RLvRL. The core modification compared to standard actor-critic is in `actor_critic_ts.py` and `ppo_ts.py`. In `actor_critic_ts.py`, we add privilege encoder and history encoder as neural network modules.
 
 ```python
 # actor_critic_ts.py
@@ -110,7 +110,7 @@ In training, we update the privilege encoder through reinforcement learning and 
 
 ## Asymmetric Actor Critic(A2C)
 
-To bridge sim-to-real gap, we usually add noise to the observation of actor. If we give the same observation to the critic, then the critic has to estimate the value from noisy observation, which is difficult. Instead, we can give critic noise-free privilege state obtained from simulation so that it can estimate the value more precisely. This aymmetric actor critic(A2C)$^4$ architecture won't hinder sim-to-real transfer because the critic network will only function in simulation. 
+To bridge sim-to-real gap, we usually add noise to the observation of actor. If we give the same observation to the critic, then the critic has to estimate the value from noisy observation, which is difficult. Instead, we can give critic noise-free privilege state obtained from simulation so that it can estimate the value more precisely. This [aymmetric actor critic(A2C)](https://arxiv.org/abs/1710.06542) architecture won't hinder sim-to-real transfer because the critic network will only function in simulation. 
 
 In `go2_ts.py`, we use two buffers for `critic_obs(input of the critic network)` and `privilege_obs(input of the privilege encoder)` separately.
 
@@ -201,7 +201,7 @@ In `go2_ts.py`, we use two buffers for `critic_obs(input of the critic network)`
 
 ## Ablation of TCN(Temporal Convolutional Network)
 
-In the original teacher-student paper$^1$, authors used TCN as the body of student encoder and compared its computation efficiency with GRU. Here we did an ablation study of TCN to see whether using TCN can bring lower prediction loss and faster training speed. We set history length to 100(corresponds to a history window of 2s). As shown in below two figures, we can see that the total reward is almost the same, but the encoder loss(i.e. prediction loss) of TCN is larger. Meanwhile, the collection_time(time to collect data for one iteration) of both are the same, yet the learning_time(time to update neural networks) of TCN is nearly five times as much as that of MLP. 
+In the original teacher-student paper, authors used TCN as the body of student encoder and compared its computation efficiency with GRU. Here we did an ablation study of TCN to see whether using TCN can bring lower prediction loss and faster training speed. We set history length to 100(corresponds to a history window of 2s). As shown in below two figures, we can see that the total reward is almost the same, but the encoder loss(i.e. prediction loss) of TCN is larger. Meanwhile, the collection_time(time to collect data for one iteration) of both are the same, yet the learning_time(time to update neural networks) of TCN is nearly five times as much as that of MLP. These results explain the superiority of MLP over TCN in this context.
 
 ```{figure} ../../_static/images/ts_total_reward_comparison.png
 ```
@@ -212,7 +212,29 @@ In the original teacher-student paper$^1$, authors used TCN as the body of stude
 ```{figure} ../../_static/images/ts_learning_time_com.png
 ```
 
-## Demonstration
+## Cocurrent Teacher-Student
+
+The biggest drawback of simple teacher-student framework is the distribution shift between teacher and student policies. And because the student policy is trained through Supervised learning but reinforcement learning, it is prone to out-of-distribution (OOD), which will lead to undesired behaviors in the student policy.
+
+To solve this shorcoming, researchers proposed [CTS (Cocurrent Teacher Student)](https://clearlab-sustech.github.io/concurrentTS/) framework. The idea of this framework is to let the gradient flow through the path of `student encoder -> policy` besides the `teacher encoder -> policy` flow. This is achieved by seperating all environments into two groups and consider the surrogate losses of them. Using this method, the robustness of the resultant student policy can be enhanced. The implementation of CTS provided by us can be found in [ppo_cts](https://github.com/lupinjia/LeggedGym-Ex/blob/main/rsl_rl/algorithms/ppo_cts.py).
+
+## Train and Play
+
+To train a teacher-student policy, type the following command:
+```bash
+python train.py --task=go2_ts --headless
+```
+
+To play it, type the following command:
+```bash
+python play.py --task=go2_ts --load_run=session_name
+```
+
+For training a cts policy, you only need to substitute the `ts` in task name with `cts`.
+
+## Demostration
+
+We have provided reference deployment code of student policy trained by Teacher-Student in [go2_deploy](https://github.com/lupinjia/go2_deploy/tree/main).
 
 Here we show the demo of running a policy trained using teacher-student framework with a history length of 20.
 
@@ -225,3 +247,4 @@ Here we show the demo of running a policy trained using teacher-student framewor
 2. [RMA: Rapid Motor Adaptation for Legged Robots](https://ashish-kmr.github.io/rma-legged-robots/)
 3. [Rapid Locomotion via Reinforcement Learning](https://agility.csail.mit.edu/)
 4. [Asymmetric Actor Critic for Image-Based Robot Learning](https://arxiv.org/abs/1710.06542)
+5. [CTS: Concurrent Teacher-Student Reinforcement Learning for Legged Locomotion](https://clearlab-sustech.github.io/concurrentTS/)

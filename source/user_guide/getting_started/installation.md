@@ -69,6 +69,14 @@ If a window like below appears, the installation is successful.
 ```{figure} ../../_static/images/genesis_installation_success.png
 ```
 
+### IsaacSim
+
+```bash
+
+pip install --upgrade "isaacsim[all,extscache]==5.1.0" --extra-index-url https://pypi.nvidia.com
+
+```
+
 Finally, you need to register a wandb account and set the environment variable:
 ```bash
 export WANDB_API_KEY=<your_api_key>

@@ -72,8 +72,18 @@ If a window like below appears, the installation is successful.
 ### IsaacSim
 
 ```bash
-
+# 1. Create a conda environment with python3.11
+conda create -n lr_lab python=3.11
+conda activate lr_lab
+# 2. Install IsaacSim
 pip install --upgrade "isaacsim[all,extscache]==5.1.0" --extra-index-url https://pypi.nvidia.com
+# 3. Verify IsaacSim Installation
+isaacsim # If a window appears, then it is successful
+# 4. Clone and install isaaclab
+git clone https://github.com/isaac-sim/IsaacLab.git && cd IsaacLab
+./isaaclab.sh --install none # do not install rl lib to use our custom rl library
+# 5. Verify IsaacLab Installtion
+python scripts/tutorials/00_sim/create_empty.py # If a windows with black scene appears, it is successful.
 
 ```
 

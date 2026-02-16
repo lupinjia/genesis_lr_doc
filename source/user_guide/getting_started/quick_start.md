@@ -1,20 +1,24 @@
 # 🚀Quick Start
 
-By default, we switch between IsaacGym and Genesis simulator through identifying python version:
+By default, we switch between different simulators through identifying python version and environment variables:
 
 ```python
 # In legged_gym/__init__.py
-if sys.version_info[1] >= 10: # >=3.10 for genesis
-    SIMULATOR = "genesis"
+if sys.version_info[1] >= 10: # >=3.10 for genesis and isaacsim
+    simulator_type = os.getenv("SIMULATOR")
+    if simulator_type == "genesis":
+        SIMULATOR = "genesis"
+    elif simulator_type == "isaaclab":
+        SIMULATOR = "isaaclab"
+    else:
+        raise ValueError("Unsupported SIMULATOR type. Please set the SIMULATOR environment variable to 'genesis' or 'isaaclab'.")
 elif sys.version_info[1] <= 8 and sys.version_info[1] >= 6: # >=3.6 and <3.9 for isaacgym
     SIMULATOR = "isaacgym"
-if SIMULATOR == "genesis":
-    import genesis as gs
-elif SIMULATOR == "isaacgym":
-    import isaacgym
 ```
 
-You can define customized strategy for switching between IsaacGym and Genesis.
+To use IsaacGym, you need a virtual environment with python3.8. Python3.10 is viable for both Genesis and IsaacSim (IsaacLab), so we add an additional environment variable (`SIMULATOR`) to determine the simulator. 
+
+You can define customized strategies for switching between different simulators.
 
 ## Train a go2 policy on the plane
 
@@ -41,7 +45,7 @@ python play.py --task=go2 --load_run=train_session_name
 ```{figure} ../../_static/images/play_in_genesis.png
 ```
 :::{note}
-If you use IsaacGym simulator, the pipeline is the same other than that the simulator window is different.
+If you use IsaacGym or IsaacSim simulator, the pipeline is the same other than that the simulator window is different.
 :::
 
 For more information about the command line arguments, please use `python play.py --help`:

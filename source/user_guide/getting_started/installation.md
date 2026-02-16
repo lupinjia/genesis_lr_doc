@@ -62,6 +62,7 @@ pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https
 git clone https://github.com/lupinjia/LeggedGym-Ex.git
 cd LeggedGym-Ex && pip install -e ".[genesis]"
 # 4. Test the installation
+export SIMULATOR=genesis
 python legged_gym/scripts/train.py --task=go2 --num_envs=100
 ```
 If a window like below appears, the installation is successful.
@@ -84,8 +85,18 @@ git clone https://github.com/isaac-sim/IsaacLab.git && cd IsaacLab
 ./isaaclab.sh --install none # do not install rl lib to use our custom rl library
 # 5. Verify IsaacLab Installtion
 python scripts/tutorials/00_sim/create_empty.py # If a windows with black scene appears, it is successful.
-
+# 6. Install LeggedGym-Ex with IsaacLab
+git clone https://github.com/lupinjia/LeggedGym-Ex.git
+cd LeggedGym-Ex && pip install -e ".[isaaclab]"
+# 7. Test the installation
+export SIMULATOR=isaaclab
+python legged_gym/scripts/train.py --task=go2 --num_envs=100
 ```
+If a window like below appears, the installation is successful.
+
+```{figure} ../../_static/images/isaacsim_installation_success.png
+```
+
 
 Finally, you need to register a wandb account and set the environment variable:
 ```bash

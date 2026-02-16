@@ -7,18 +7,18 @@ Below table shows the recommended (tested) requirements of the computer for runn
 | Component | Recommended (Tested) |
 |-----------|-------------|
 |    CPU    |Intel Core i9|
-|    GPU    |   RTX 3080  |
+|    GPU    |RTX 3080 10GB|
 |     OS    | Ubuntu 22.04|
 |   Python  |     >=3.8   |
-|Nvidia Driver|   >=535   |
+|Nvidia Driver|   >=570   |
 
 LeggedGym-Ex incoporates two simulators into one framework. One can choose either simulator to use, with each simulator requiring a seperate conda environment due to the limitation of python versions. Below is the recommended (tested) environment setting for two simulators:
 
-| Component |  IsaacGym   |   Genesis   |
-|-----------|-------------|-------------|
-|  Python   |    3.8      |    >=3.10   |
-|  Nvidia Driver |   535  |     535     |
-|  PyTorch  | 2.4.1+cu121 | 2.8.0+cu126 |
+| Component |  IsaacGym   |   Genesis   | IsaacSim |
+|-----------|-------------|-------------|----------|
+|  Python   |    3.8      |    >=3.10   |  >=3.10  |
+|  Nvidia Driver |   570  |     570     |   570    |
+|  PyTorch  | 2.4.1+cu121 | 2.8.0+cu126 | 2.7.0+cu128|
 
 ## Direct Installation
 

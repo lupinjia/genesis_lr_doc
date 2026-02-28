@@ -27,10 +27,10 @@ The processed motion will be saved as a .pkl file under `LeggedGymEx/resources/r
 Then you can start training by executing `python legged_gym/scripts/train.py --task=g1_mimic --headless --motion_file=name_of_your_processed_motion.pkl` (For example: `python legged_gym/scripts/train.py --task=g1_mimic --headless --motion_file=02_01_walk_stageii_60hz_isaacgym.pkl`).
 
 :::{note}
-Because link sequences in IsaacGym/Genesis/IsaacLab are difference, make you use the reference motion generated from the same simulator when training.
+Because link sequences in IsaacGym/Genesis/IsaacLab are different, please make sure you use the reference motion generated from the same simulator when training.
 :::
 
-After the training is over, you can see the result using `python legged_gym/scripts/play.py --task=g1_mimic --motion_file=name_of_your_processed_motion.pkl`. Below are some demos: 
+After the training is over, you can see the result using `python legged_gym/scripts/play.py --task=g1_mimic --motion_file=name_of_your_processed_motion.pkl --load_run=loaded_training_session`. Below are some demos: 
 
 <video preload="auto" controls="True" width="100%">
 <source src="https://github.com/lupinjia/genesis_lr_doc/raw/refs/heads/main/source/_static/videos/g1_mimic_walk_isaaclab.mp4" type="video/mp4">
